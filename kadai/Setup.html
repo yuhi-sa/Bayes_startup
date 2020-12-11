@@ -1,0 +1,806 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <meta charset="utf-8" />
+      <title>Setup</title>
+      <style>.markdown-preview:not([data-use-github-style]) { padding: 2em; font-size: 1.2em; color: rgb(56, 58, 66); background-color: rgb(250, 250, 250); overflow: auto; }
+.markdown-preview:not([data-use-github-style]) > :first-child { margin-top: 0px; }
+.markdown-preview:not([data-use-github-style]) h1, .markdown-preview:not([data-use-github-style]) h2, .markdown-preview:not([data-use-github-style]) h3, .markdown-preview:not([data-use-github-style]) h4, .markdown-preview:not([data-use-github-style]) h5, .markdown-preview:not([data-use-github-style]) h6 { line-height: 1.2; margin-top: 1.5em; margin-bottom: 0.5em; color: rgb(0, 0, 0); }
+.markdown-preview:not([data-use-github-style]) h1 { font-size: 2.4em; font-weight: 300; }
+.markdown-preview:not([data-use-github-style]) h2 { font-size: 1.8em; font-weight: 400; }
+.markdown-preview:not([data-use-github-style]) h3 { font-size: 1.5em; font-weight: 500; }
+.markdown-preview:not([data-use-github-style]) h4 { font-size: 1.2em; font-weight: 600; }
+.markdown-preview:not([data-use-github-style]) h5 { font-size: 1.1em; font-weight: 600; }
+.markdown-preview:not([data-use-github-style]) h6 { font-size: 1em; font-weight: 600; }
+.markdown-preview:not([data-use-github-style]) strong { color: rgb(0, 0, 0); }
+.markdown-preview:not([data-use-github-style]) del { color: rgb(94, 97, 110); }
+.markdown-preview:not([data-use-github-style]) a, .markdown-preview:not([data-use-github-style]) a code { color: rgb(82, 111, 255); }
+.markdown-preview:not([data-use-github-style]) img { max-width: 100%; }
+.markdown-preview:not([data-use-github-style]) > p { margin-top: 0px; margin-bottom: 1.5em; }
+.markdown-preview:not([data-use-github-style]) > ul, .markdown-preview:not([data-use-github-style]) > ol { margin-bottom: 1.5em; }
+.markdown-preview:not([data-use-github-style]) blockquote { margin: 1.5em 0px; font-size: inherit; color: rgb(94, 97, 110); border-color: rgb(209, 209, 210); border-width: 4px; }
+.markdown-preview:not([data-use-github-style]) hr { margin: 3em 0px; border-top: 2px dashed rgb(209, 209, 210); background: none; }
+.markdown-preview:not([data-use-github-style]) table { margin: 1.5em 0px; }
+.markdown-preview:not([data-use-github-style]) th { color: rgb(0, 0, 0); }
+.markdown-preview:not([data-use-github-style]) th, .markdown-preview:not([data-use-github-style]) td { padding: 0.66em 1em; border: 1px solid rgb(209, 209, 210); }
+.markdown-preview:not([data-use-github-style]) code { color: rgb(0, 0, 0); background-color: rgb(234, 234, 235); }
+.markdown-preview:not([data-use-github-style]) pre.editor-colors { margin: 1.5em 0px; padding: 1em; font-size: 0.92em; border-radius: 3px; background-color: rgb(240, 240, 240); }
+.markdown-preview:not([data-use-github-style]) kbd { color: rgb(0, 0, 0); border-width: 1px 1px 2px; border-style: solid; border-color: rgb(209, 209, 210) rgb(209, 209, 210) rgb(193, 193, 194); border-image: initial; background-color: rgb(234, 234, 235); }
+.markdown-preview[data-use-github-style] { font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif; line-height: 1.6; word-wrap: break-word; padding: 30px; font-size: 16px; color: rgb(51, 51, 51); background-color: rgb(255, 255, 255); overflow: scroll; }
+.markdown-preview[data-use-github-style] > :first-child { margin-top: 0px !important; }
+.markdown-preview[data-use-github-style] > :last-child { margin-bottom: 0px !important; }
+.markdown-preview[data-use-github-style] a:not([href]) { color: inherit; text-decoration: none; }
+.markdown-preview[data-use-github-style] .absent { color: rgb(204, 0, 0); }
+.markdown-preview[data-use-github-style] .anchor { position: absolute; top: 0px; left: 0px; display: block; padding-right: 6px; padding-left: 30px; margin-left: -30px; }
+.markdown-preview[data-use-github-style] .anchor:focus { outline: none; }
+.markdown-preview[data-use-github-style] h1, .markdown-preview[data-use-github-style] h2, .markdown-preview[data-use-github-style] h3, .markdown-preview[data-use-github-style] h4, .markdown-preview[data-use-github-style] h5, .markdown-preview[data-use-github-style] h6 { position: relative; margin-top: 1em; margin-bottom: 16px; font-weight: bold; line-height: 1.4; }
+.markdown-preview[data-use-github-style] h1 .octicon-link, .markdown-preview[data-use-github-style] h2 .octicon-link, .markdown-preview[data-use-github-style] h3 .octicon-link, .markdown-preview[data-use-github-style] h4 .octicon-link, .markdown-preview[data-use-github-style] h5 .octicon-link, .markdown-preview[data-use-github-style] h6 .octicon-link { display: none; color: rgb(0, 0, 0); vertical-align: middle; }
+.markdown-preview[data-use-github-style] h1:hover .anchor, .markdown-preview[data-use-github-style] h2:hover .anchor, .markdown-preview[data-use-github-style] h3:hover .anchor, .markdown-preview[data-use-github-style] h4:hover .anchor, .markdown-preview[data-use-github-style] h5:hover .anchor, .markdown-preview[data-use-github-style] h6:hover .anchor { padding-left: 8px; margin-left: -30px; text-decoration: none; }
+.markdown-preview[data-use-github-style] h1:hover .anchor .octicon-link, .markdown-preview[data-use-github-style] h2:hover .anchor .octicon-link, .markdown-preview[data-use-github-style] h3:hover .anchor .octicon-link, .markdown-preview[data-use-github-style] h4:hover .anchor .octicon-link, .markdown-preview[data-use-github-style] h5:hover .anchor .octicon-link, .markdown-preview[data-use-github-style] h6:hover .anchor .octicon-link { display: inline-block; }
+.markdown-preview[data-use-github-style] h1 tt, .markdown-preview[data-use-github-style] h2 tt, .markdown-preview[data-use-github-style] h3 tt, .markdown-preview[data-use-github-style] h4 tt, .markdown-preview[data-use-github-style] h5 tt, .markdown-preview[data-use-github-style] h6 tt, .markdown-preview[data-use-github-style] h1 code, .markdown-preview[data-use-github-style] h2 code, .markdown-preview[data-use-github-style] h3 code, .markdown-preview[data-use-github-style] h4 code, .markdown-preview[data-use-github-style] h5 code, .markdown-preview[data-use-github-style] h6 code { font-size: inherit; }
+.markdown-preview[data-use-github-style] h1 { padding-bottom: 0.3em; font-size: 2.25em; line-height: 1.2; border-bottom: 1px solid rgb(238, 238, 238); }
+.markdown-preview[data-use-github-style] h1 .anchor { line-height: 1; }
+.markdown-preview[data-use-github-style] h2 { padding-bottom: 0.3em; font-size: 1.75em; line-height: 1.225; border-bottom: 1px solid rgb(238, 238, 238); }
+.markdown-preview[data-use-github-style] h2 .anchor { line-height: 1; }
+.markdown-preview[data-use-github-style] h3 { font-size: 1.5em; line-height: 1.43; }
+.markdown-preview[data-use-github-style] h3 .anchor { line-height: 1.2; }
+.markdown-preview[data-use-github-style] h4 { font-size: 1.25em; }
+.markdown-preview[data-use-github-style] h4 .anchor { line-height: 1.2; }
+.markdown-preview[data-use-github-style] h5 { font-size: 1em; }
+.markdown-preview[data-use-github-style] h5 .anchor { line-height: 1.1; }
+.markdown-preview[data-use-github-style] h6 { font-size: 1em; color: rgb(119, 119, 119); }
+.markdown-preview[data-use-github-style] h6 .anchor { line-height: 1.1; }
+.markdown-preview[data-use-github-style] p, .markdown-preview[data-use-github-style] blockquote, .markdown-preview[data-use-github-style] ul, .markdown-preview[data-use-github-style] ol, .markdown-preview[data-use-github-style] dl, .markdown-preview[data-use-github-style] table, .markdown-preview[data-use-github-style] pre { margin-top: 0px; margin-bottom: 16px; }
+.markdown-preview[data-use-github-style] hr { height: 4px; padding: 0px; margin: 16px 0px; background-color: rgb(231, 231, 231); border: 0px none; }
+.markdown-preview[data-use-github-style] ul, .markdown-preview[data-use-github-style] ol { padding-left: 2em; }
+.markdown-preview[data-use-github-style] ul.no-list, .markdown-preview[data-use-github-style] ol.no-list { padding: 0px; list-style-type: none; }
+.markdown-preview[data-use-github-style] ul ul, .markdown-preview[data-use-github-style] ul ol, .markdown-preview[data-use-github-style] ol ol, .markdown-preview[data-use-github-style] ol ul { margin-top: 0px; margin-bottom: 0px; }
+.markdown-preview[data-use-github-style] li > p { margin-top: 16px; }
+.markdown-preview[data-use-github-style] dl { padding: 0px; }
+.markdown-preview[data-use-github-style] dl dt { padding: 0px; margin-top: 16px; font-size: 1em; font-style: italic; font-weight: bold; }
+.markdown-preview[data-use-github-style] dl dd { padding: 0px 16px; margin-bottom: 16px; }
+.markdown-preview[data-use-github-style] blockquote { padding: 0px 15px; color: rgb(119, 119, 119); border-left: 4px solid rgb(221, 221, 221); }
+.markdown-preview[data-use-github-style] blockquote > :first-child { margin-top: 0px; }
+.markdown-preview[data-use-github-style] blockquote > :last-child { margin-bottom: 0px; }
+.markdown-preview[data-use-github-style] table { display: block; width: 100%; overflow: auto; word-break: keep-all; }
+.markdown-preview[data-use-github-style] table th { font-weight: bold; }
+.markdown-preview[data-use-github-style] table th, .markdown-preview[data-use-github-style] table td { padding: 6px 13px; border: 1px solid rgb(221, 221, 221); }
+.markdown-preview[data-use-github-style] table tr { background-color: rgb(255, 255, 255); border-top: 1px solid rgb(204, 204, 204); }
+.markdown-preview[data-use-github-style] table tr:nth-child(2n) { background-color: rgb(248, 248, 248); }
+.markdown-preview[data-use-github-style] img { max-width: 100%; box-sizing: border-box; }
+.markdown-preview[data-use-github-style] .emoji { max-width: none; }
+.markdown-preview[data-use-github-style] span.frame { display: block; overflow: hidden; }
+.markdown-preview[data-use-github-style] span.frame > span { display: block; float: left; width: auto; padding: 7px; margin: 13px 0px 0px; overflow: hidden; border: 1px solid rgb(221, 221, 221); }
+.markdown-preview[data-use-github-style] span.frame span img { display: block; float: left; }
+.markdown-preview[data-use-github-style] span.frame span span { display: block; padding: 5px 0px 0px; clear: both; color: rgb(51, 51, 51); }
+.markdown-preview[data-use-github-style] span.align-center { display: block; overflow: hidden; clear: both; }
+.markdown-preview[data-use-github-style] span.align-center > span { display: block; margin: 13px auto 0px; overflow: hidden; text-align: center; }
+.markdown-preview[data-use-github-style] span.align-center span img { margin: 0px auto; text-align: center; }
+.markdown-preview[data-use-github-style] span.align-right { display: block; overflow: hidden; clear: both; }
+.markdown-preview[data-use-github-style] span.align-right > span { display: block; margin: 13px 0px 0px; overflow: hidden; text-align: right; }
+.markdown-preview[data-use-github-style] span.align-right span img { margin: 0px; text-align: right; }
+.markdown-preview[data-use-github-style] span.float-left { display: block; float: left; margin-right: 13px; overflow: hidden; }
+.markdown-preview[data-use-github-style] span.float-left span { margin: 13px 0px 0px; }
+.markdown-preview[data-use-github-style] span.float-right { display: block; float: right; margin-left: 13px; overflow: hidden; }
+.markdown-preview[data-use-github-style] span.float-right > span { display: block; margin: 13px auto 0px; overflow: hidden; text-align: right; }
+.markdown-preview[data-use-github-style] code, .markdown-preview[data-use-github-style] tt { padding: 0.2em 0px; margin: 0px; font-size: 85%; background-color: rgba(0, 0, 0, 0.04); border-radius: 3px; }
+.markdown-preview[data-use-github-style] code::before, .markdown-preview[data-use-github-style] tt::before, .markdown-preview[data-use-github-style] code::after, .markdown-preview[data-use-github-style] tt::after { letter-spacing: -0.2em; content: " "; }
+.markdown-preview[data-use-github-style] code br, .markdown-preview[data-use-github-style] tt br { display: none; }
+.markdown-preview[data-use-github-style] del code { text-decoration: inherit; }
+.markdown-preview[data-use-github-style] pre > code { padding: 0px; margin: 0px; font-size: 100%; word-break: normal; white-space: pre; background: transparent; border: 0px; }
+.markdown-preview[data-use-github-style] .highlight { margin-bottom: 16px; }
+.markdown-preview[data-use-github-style] .highlight pre, .markdown-preview[data-use-github-style] pre { padding: 16px; overflow: auto; font-size: 85%; line-height: 1.45; background-color: rgb(247, 247, 247); border-radius: 3px; }
+.markdown-preview[data-use-github-style] .highlight pre { margin-bottom: 0px; word-break: normal; }
+.markdown-preview[data-use-github-style] pre { word-wrap: normal; }
+.markdown-preview[data-use-github-style] pre code, .markdown-preview[data-use-github-style] pre tt { display: inline; max-width: initial; padding: 0px; margin: 0px; overflow: initial; line-height: inherit; word-wrap: normal; background-color: transparent; border: 0px; }
+.markdown-preview[data-use-github-style] pre code::before, .markdown-preview[data-use-github-style] pre tt::before, .markdown-preview[data-use-github-style] pre code::after, .markdown-preview[data-use-github-style] pre tt::after { content: normal; }
+.markdown-preview[data-use-github-style] kbd { display: inline-block; padding: 3px 5px; font-size: 11px; line-height: 10px; color: rgb(85, 85, 85); vertical-align: middle; background-color: rgb(252, 252, 252); border-width: 1px; border-style: solid; border-color: rgb(204, 204, 204) rgb(204, 204, 204) rgb(187, 187, 187); border-image: initial; border-radius: 3px; box-shadow: rgb(187, 187, 187) 0px -1px 0px inset; }
+.markdown-preview[data-use-github-style] a { color: rgb(51, 122, 183); }
+.markdown-preview[data-use-github-style] code { color: inherit; }
+.markdown-preview[data-use-github-style] pre.editor-colors { padding: 0.8em 1em; margin-bottom: 1em; font-size: 0.85em; border-radius: 4px; overflow: auto; }
+.scrollbars-visible-always .markdown-preview pre.editor-colors .vertical-scrollbar, .scrollbars-visible-always .markdown-preview pre.editor-colors .horizontal-scrollbar { visibility: hidden; }
+.scrollbars-visible-always .markdown-preview pre.editor-colors:hover .vertical-scrollbar, .scrollbars-visible-always .markdown-preview pre.editor-colors:hover .horizontal-scrollbar { visibility: visible; }
+.markdown-preview .task-list-item-checkbox { position: absolute; margin: 0.25em 0px 0px -1.4em; }
+.bracket-matcher .region {
+  border-bottom: 1px dotted lime;
+  position: absolute;
+}
+.line-number.bracket-matcher.bracket-matcher {
+  color: #383a42;
+  background-color: #e5e5e6;
+}
+
+@keyframes RotatingBackground {
+  0% {
+    background-position-x: 0%;
+  }
+  100% {
+    background-position-x: 100%;
+  }
+}
+
+.debugger-breakpoint-icon::before,
+.debugger-shadow-breakpoint-icon::before {
+  font-family: 'Octicons Regular';
+  font-weight: normal;
+  font-style: normal;
+  display: inline-block;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  text-decoration: none;
+  font-size: 130%;
+  width: 130%;
+  height: 130%;
+  content: "\f052";
+}
+.debugger-breakpoint-icon,
+.debugger-breakpoint-icon-disabled,
+.debugger-breakpoint-icon-unresolved,
+.debugger-breakpoint-icon-conditional,
+.debugger-shadow-breakpoint-icon {
+  text-align: center;
+  display: block;
+  width: 0.8em;
+  cursor: pointer;
+}
+.debugger-breakpoint-icon-nonconditional {
+  color: #5293d8;
+}
+.debugger-breakpoint-icon-conditional {
+  color: #CD8E00;
+}
+.debugger-breakpoint-icon-disabled {
+  position: relative;
+  top: -4px;
+  left: 2px;
+}
+.debugger-breakpoint-icon-disabled::before {
+  font-family: 'Octicons Regular';
+  font-weight: normal;
+  font-style: normal;
+  display: inline-block;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  text-decoration: none;
+  font-size: 78%;
+  width: 78%;
+  height: 78%;
+  content: "\f084";
+}
+.debugger-breakpoint-icon-unresolved {
+  position: relative;
+  top: -2px;
+}
+.debugger-breakpoint-icon-unresolved::before {
+  font-family: 'Octicons Regular';
+  font-weight: normal;
+  font-style: normal;
+  display: inline-block;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  text-decoration: none;
+  font-size: 80%;
+  width: 80%;
+  height: 80%;
+  content: "\f0e8";
+}
+.debugger-shadow-breakpoint-icon {
+  color: rgba(82, 147, 216, 0.4);
+}
+.debugger-current-line-highlight {
+  background: linear-gradient(to bottom, rgba(0, 152, 255, 0.8) 0%, rgba(0, 152, 255, 0.8) 5%, rgba(0, 152, 255, 0.3) 5%, rgba(0, 152, 255, 0.3) 95%, rgba(0, 152, 255, 0.8) 95%, rgba(0, 152, 255, 0.8) 100%);
+}
+
+.gutter[gutter-name=diagnostics-gutter] {
+  width: 0.7em;
+}
+.diagnostics-gutter-ui-item {
+  display: flex;
+}
+.diagnostics-gutter-ui-item .icon {
+  display: flex;
+  width: 0.7em;
+  height: 0.7em;
+  font-size: 0.7em;
+  align-self: center;
+}
+.diagnostics-gutter-ui-item .icon::before {
+  width: 1em;
+  height: 1em;
+  font-size: 1em;
+  margin: 0;
+  align-self: center;
+}
+.diagnostics-gutter-ui-item.diagnostics-gutter-ui-gutter-info,
+.diagnostics-gutter-ui-item.diagnostics-gutter-ui-gutter-review {
+  color: #5293d8;
+}
+.diagnostics-gutter-ui-item.diagnostics-gutter-ui-gutter-error {
+  color: #c00;
+}
+.diagnostics-gutter-ui-item.diagnostics-gutter-ui-gutter-action,
+.diagnostics-gutter-ui-item.diagnostics-gutter-ui-gutter-warning {
+  color: #CD8E00;
+}
+
+@-webkit-keyframes bracketanimation {
+  from {
+    border-width: 1px;
+    border-color: orange;
+    height: 100%;
+    top: 0;
+    width: 100%;
+    left: 0;
+  }
+  50% {
+    border-width: 3px;
+    border-color: orange;
+    height: 200%;
+    top: -50%;
+    width: 250%;
+    left: -75%;
+  }
+  to {
+    border-width: 1px;
+    border-color: rgba(255, 165, 0, 0.5);
+    height: 100%;
+    top: 0;
+    width: 100%;
+    left: 0;
+  }
+}
+.bracket-matcher .region {
+  border: 0px !important;
+  box-shadow: none !important;
+}
+.bracket-matcher .region:after {
+  content: " ";
+  -webkit-animation-name: bracketanimation;
+  -webkit-animation-duration: .5s;
+  border: 1px solid rgba(255, 165, 0, 0.5);
+  border-style: solid;
+  border-radius: 3px;
+  background-color: rgba(255, 165, 0, 0.2);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+pre.editor-colors .gutter .line-number {
+  /* Use CSS specificity to force errors to override warnings and info markers */
+  /* Use CSS specificity to force warnings to override info markes. */
+}
+pre.editor-colors .gutter .line-number.latex-error,
+pre.editor-colors .gutter .line-number.latex-error.latex-warning,
+pre.editor-colors .gutter .line-number.latex-error.latex-info,
+pre.editor-colors .gutter .line-number.latex-error.latex-warning.latex-info {
+  border-left: 2px solid #c00;
+  padding-left: calc(0.5em - 2px);
+}
+pre.editor-colors .gutter .line-number.latex-warning,
+pre.editor-colors .gutter .line-number.latex-warning.latex-info {
+  border-left: 2px solid #ff4800;
+  padding-left: calc(0.5em - 2px);
+}
+pre.editor-colors .gutter .line-number.latex-info {
+  border-left: 2px solid #0098ff;
+  padding-left: calc(0.5em - 2px);
+}
+
+pre.editor-colors {
+  background-color: #fafafa;
+  color: #383a42;
+}
+pre.editor-colors .line.cursor-line {
+  background-color: rgba(56, 58, 66, 0.05);
+}
+pre.editor-colors .invisible {
+  color: #383a42;
+}
+pre.editor-colors .cursor {
+  border-left: 2px solid #526fff;
+}
+pre.editor-colors .selection .region {
+  background-color: #e5e5e6;
+}
+pre.editor-colors .bracket-matcher .region {
+  border-bottom: 1px solid #526fff;
+  box-sizing: border-box;
+}
+pre.editor-colors .invisible-character {
+  color: rgba(56, 58, 66, 0.2);
+}
+pre.editor-colors .indent-guide {
+  color: rgba(56, 58, 66, 0.2);
+}
+pre.editor-colors .wrap-guide {
+  background-color: rgba(56, 58, 66, 0.2);
+}
+pre.editor-colors .find-result .region.region.region,
+pre.editor-colors .current-result .region.region.region {
+  border-radius: 2px;
+  background-color: rgba(82, 111, 255, 0.2);
+  transition: border-color 0.4s;
+}
+pre.editor-colors .find-result .region.region.region {
+  border: 2px solid transparent;
+}
+pre.editor-colors .current-result .region.region.region {
+  border: 2px solid #526fff;
+  transition-duration: .1s;
+}
+pre.editor-colors .gutter .line-number {
+  color: #9d9d9f;
+  -webkit-font-smoothing: antialiased;
+}
+pre.editor-colors .gutter .line-number.cursor-line {
+  color: #383a42;
+  background-color: #e5e5e6;
+}
+pre.editor-colors .gutter .line-number.cursor-line-no-selection {
+  background-color: transparent;
+}
+pre.editor-colors .gutter .line-number .icon-right {
+  color: #383a42;
+}
+pre.editor-colors .gutter:not(.git-diff-icon) .line-number.git-line-removed.git-line-removed::before {
+  bottom: -3px;
+}
+pre.editor-colors .gutter:not(.git-diff-icon) .line-number.git-line-removed::after {
+  content: "";
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+  width: 25px;
+  border-bottom: 1px dotted rgba(255, 20, 20, 0.5);
+  pointer-events: none;
+}
+pre.editor-colors .gutter .line-number.folded,
+pre.editor-colors .gutter .line-number:after,
+pre.editor-colors .fold-marker:after {
+  color: #383a42;
+}
+.syntax--comment {
+  color: #a0a1a7;
+  font-style: italic;
+}
+.syntax--comment .syntax--markup.syntax--link {
+  color: #a0a1a7;
+}
+.syntax--entity.syntax--name.syntax--type {
+  color: #c18401;
+}
+.syntax--entity.syntax--other.syntax--inherited-class {
+  color: #50a14f;
+}
+.syntax--keyword {
+  color: #a626a4;
+}
+.syntax--keyword.syntax--control {
+  color: #a626a4;
+}
+.syntax--keyword.syntax--operator {
+  color: #383a42;
+}
+.syntax--keyword.syntax--other.syntax--special-method {
+  color: #4078f2;
+}
+.syntax--keyword.syntax--other.syntax--unit {
+  color: #986801;
+}
+.syntax--storage {
+  color: #a626a4;
+}
+.syntax--storage.syntax--type.syntax--annotation,
+.syntax--storage.syntax--type.syntax--primitive {
+  color: #a626a4;
+}
+.syntax--storage.syntax--modifier.syntax--package,
+.syntax--storage.syntax--modifier.syntax--import {
+  color: #383a42;
+}
+.syntax--constant {
+  color: #986801;
+}
+.syntax--constant.syntax--variable {
+  color: #986801;
+}
+.syntax--constant.syntax--character.syntax--escape {
+  color: #0184bc;
+}
+.syntax--constant.syntax--numeric {
+  color: #986801;
+}
+.syntax--constant.syntax--other.syntax--color {
+  color: #0184bc;
+}
+.syntax--constant.syntax--other.syntax--symbol {
+  color: #0184bc;
+}
+.syntax--variable {
+  color: #e45649;
+}
+.syntax--variable.syntax--interpolation {
+  color: #ca1243;
+}
+.syntax--variable.syntax--parameter {
+  color: #383a42;
+}
+.syntax--string {
+  color: #50a14f;
+}
+.syntax--string.syntax--regexp {
+  color: #0184bc;
+}
+.syntax--string.syntax--regexp .syntax--source.syntax--ruby.syntax--embedded {
+  color: #c18401;
+}
+.syntax--string.syntax--other.syntax--link {
+  color: #e45649;
+}
+.syntax--punctuation.syntax--definition.syntax--comment {
+  color: #a0a1a7;
+}
+.syntax--punctuation.syntax--definition.syntax--method-parameters,
+.syntax--punctuation.syntax--definition.syntax--function-parameters,
+.syntax--punctuation.syntax--definition.syntax--parameters,
+.syntax--punctuation.syntax--definition.syntax--separator,
+.syntax--punctuation.syntax--definition.syntax--seperator,
+.syntax--punctuation.syntax--definition.syntax--array {
+  color: #383a42;
+}
+.syntax--punctuation.syntax--definition.syntax--heading,
+.syntax--punctuation.syntax--definition.syntax--identity {
+  color: #4078f2;
+}
+.syntax--punctuation.syntax--definition.syntax--bold {
+  color: #c18401;
+  font-weight: bold;
+}
+.syntax--punctuation.syntax--definition.syntax--italic {
+  color: #a626a4;
+  font-style: italic;
+}
+.syntax--punctuation.syntax--section.syntax--embedded {
+  color: #ca1243;
+}
+.syntax--punctuation.syntax--section.syntax--method,
+.syntax--punctuation.syntax--section.syntax--class,
+.syntax--punctuation.syntax--section.syntax--inner-class {
+  color: #383a42;
+}
+.syntax--support.syntax--class {
+  color: #c18401;
+}
+.syntax--support.syntax--type {
+  color: #0184bc;
+}
+.syntax--support.syntax--function {
+  color: #0184bc;
+}
+.syntax--support.syntax--function.syntax--any-method {
+  color: #4078f2;
+}
+.syntax--entity.syntax--name.syntax--function {
+  color: #4078f2;
+}
+.syntax--entity.syntax--name.syntax--class,
+.syntax--entity.syntax--name.syntax--type.syntax--class {
+  color: #c18401;
+}
+.syntax--entity.syntax--name.syntax--section {
+  color: #4078f2;
+}
+.syntax--entity.syntax--name.syntax--tag {
+  color: #e45649;
+}
+.syntax--entity.syntax--other.syntax--attribute-name {
+  color: #986801;
+}
+.syntax--entity.syntax--other.syntax--attribute-name.syntax--id {
+  color: #4078f2;
+}
+.syntax--meta.syntax--class {
+  color: #c18401;
+}
+.syntax--meta.syntax--class.syntax--body {
+  color: #383a42;
+}
+.syntax--meta.syntax--method-call,
+.syntax--meta.syntax--method {
+  color: #383a42;
+}
+.syntax--meta.syntax--definition.syntax--variable {
+  color: #e45649;
+}
+.syntax--meta.syntax--link {
+  color: #986801;
+}
+.syntax--meta.syntax--require {
+  color: #4078f2;
+}
+.syntax--meta.syntax--selector {
+  color: #a626a4;
+}
+.syntax--meta.syntax--separator {
+  color: #383a42;
+}
+.syntax--meta.syntax--tag {
+  color: #383a42;
+}
+.syntax--underline {
+  text-decoration: underline;
+}
+.syntax--none {
+  color: #383a42;
+}
+.syntax--invalid.syntax--deprecated {
+  color: #000000 !important;
+  background-color: #f2a60d !important;
+}
+.syntax--invalid.syntax--illegal {
+  color: white !important;
+  background-color: #ff1414 !important;
+}
+.syntax--markup.syntax--bold {
+  color: #986801;
+  font-weight: bold;
+}
+.syntax--markup.syntax--changed {
+  color: #a626a4;
+}
+.syntax--markup.syntax--deleted {
+  color: #e45649;
+}
+.syntax--markup.syntax--italic {
+  color: #a626a4;
+  font-style: italic;
+}
+.syntax--markup.syntax--heading {
+  color: #e45649;
+}
+.syntax--markup.syntax--heading .syntax--punctuation.syntax--definition.syntax--heading {
+  color: #4078f2;
+}
+.syntax--markup.syntax--link {
+  color: #0184bc;
+}
+.syntax--markup.syntax--inserted {
+  color: #50a14f;
+}
+.syntax--markup.syntax--quote {
+  color: #986801;
+}
+.syntax--markup.syntax--raw {
+  color: #50a14f;
+}
+.syntax--source.syntax--c .syntax--keyword.syntax--operator {
+  color: #a626a4;
+}
+.syntax--source.syntax--cpp .syntax--keyword.syntax--operator {
+  color: #a626a4;
+}
+.syntax--source.syntax--cs .syntax--keyword.syntax--operator {
+  color: #a626a4;
+}
+.syntax--source.syntax--css .syntax--property-name,
+.syntax--source.syntax--css .syntax--property-value {
+  color: #696c77;
+}
+.syntax--source.syntax--css .syntax--property-name.syntax--support,
+.syntax--source.syntax--css .syntax--property-value.syntax--support {
+  color: #383a42;
+}
+.syntax--source.syntax--elixir .syntax--source.syntax--embedded.syntax--source {
+  color: #383a42;
+}
+.syntax--source.syntax--elixir .syntax--constant.syntax--language,
+.syntax--source.syntax--elixir .syntax--constant.syntax--numeric,
+.syntax--source.syntax--elixir .syntax--constant.syntax--definition {
+  color: #4078f2;
+}
+.syntax--source.syntax--elixir .syntax--variable.syntax--definition,
+.syntax--source.syntax--elixir .syntax--variable.syntax--anonymous {
+  color: #a626a4;
+}
+.syntax--source.syntax--elixir .syntax--parameter.syntax--variable.syntax--function {
+  color: #986801;
+  font-style: italic;
+}
+.syntax--source.syntax--elixir .syntax--quoted {
+  color: #50a14f;
+}
+.syntax--source.syntax--elixir .syntax--keyword.syntax--special-method,
+.syntax--source.syntax--elixir .syntax--embedded.syntax--section,
+.syntax--source.syntax--elixir .syntax--embedded.syntax--source.syntax--empty {
+  color: #e45649;
+}
+.syntax--source.syntax--elixir .syntax--readwrite.syntax--module .syntax--punctuation {
+  color: #e45649;
+}
+.syntax--source.syntax--elixir .syntax--regexp.syntax--section,
+.syntax--source.syntax--elixir .syntax--regexp.syntax--string {
+  color: #ca1243;
+}
+.syntax--source.syntax--elixir .syntax--separator,
+.syntax--source.syntax--elixir .syntax--keyword.syntax--operator {
+  color: #986801;
+}
+.syntax--source.syntax--elixir .syntax--variable.syntax--constant {
+  color: #c18401;
+}
+.syntax--source.syntax--elixir .syntax--array,
+.syntax--source.syntax--elixir .syntax--scope,
+.syntax--source.syntax--elixir .syntax--section {
+  color: #696c77;
+}
+.syntax--source.syntax--gfm .syntax--markup {
+  -webkit-font-smoothing: auto;
+}
+.syntax--source.syntax--gfm .syntax--link .syntax--entity {
+  color: #4078f2;
+}
+.syntax--source.syntax--go .syntax--storage.syntax--type.syntax--string {
+  color: #a626a4;
+}
+.syntax--source.syntax--ini .syntax--keyword.syntax--other.syntax--definition.syntax--ini {
+  color: #e45649;
+}
+.syntax--source.syntax--java .syntax--storage.syntax--modifier.syntax--import {
+  color: #c18401;
+}
+.syntax--source.syntax--java .syntax--storage.syntax--type {
+  color: #c18401;
+}
+.syntax--source.syntax--java .syntax--keyword.syntax--operator.syntax--instanceof {
+  color: #a626a4;
+}
+.syntax--source.syntax--java-properties .syntax--meta.syntax--key-pair {
+  color: #e45649;
+}
+.syntax--source.syntax--java-properties .syntax--meta.syntax--key-pair > .syntax--punctuation {
+  color: #383a42;
+}
+.syntax--source.syntax--js .syntax--keyword.syntax--operator {
+  color: #0184bc;
+}
+.syntax--source.syntax--js .syntax--keyword.syntax--operator.syntax--delete,
+.syntax--source.syntax--js .syntax--keyword.syntax--operator.syntax--in,
+.syntax--source.syntax--js .syntax--keyword.syntax--operator.syntax--of,
+.syntax--source.syntax--js .syntax--keyword.syntax--operator.syntax--instanceof,
+.syntax--source.syntax--js .syntax--keyword.syntax--operator.syntax--new,
+.syntax--source.syntax--js .syntax--keyword.syntax--operator.syntax--typeof,
+.syntax--source.syntax--js .syntax--keyword.syntax--operator.syntax--void {
+  color: #a626a4;
+}
+.syntax--source.syntax--json .syntax--meta.syntax--structure.syntax--dictionary.syntax--json > .syntax--string.syntax--quoted.syntax--json {
+  color: #e45649;
+}
+.syntax--source.syntax--json .syntax--meta.syntax--structure.syntax--dictionary.syntax--json > .syntax--string.syntax--quoted.syntax--json > .syntax--punctuation.syntax--string {
+  color: #e45649;
+}
+.syntax--source.syntax--json .syntax--meta.syntax--structure.syntax--dictionary.syntax--json > .syntax--value.syntax--json > .syntax--string.syntax--quoted.syntax--json,
+.syntax--source.syntax--json .syntax--meta.syntax--structure.syntax--array.syntax--json > .syntax--value.syntax--json > .syntax--string.syntax--quoted.syntax--json,
+.syntax--source.syntax--json .syntax--meta.syntax--structure.syntax--dictionary.syntax--json > .syntax--value.syntax--json > .syntax--string.syntax--quoted.syntax--json > .syntax--punctuation,
+.syntax--source.syntax--json .syntax--meta.syntax--structure.syntax--array.syntax--json > .syntax--value.syntax--json > .syntax--string.syntax--quoted.syntax--json > .syntax--punctuation {
+  color: #50a14f;
+}
+.syntax--source.syntax--json .syntax--meta.syntax--structure.syntax--dictionary.syntax--json > .syntax--constant.syntax--language.syntax--json,
+.syntax--source.syntax--json .syntax--meta.syntax--structure.syntax--array.syntax--json > .syntax--constant.syntax--language.syntax--json {
+  color: #0184bc;
+}
+.syntax--source.syntax--ruby .syntax--constant.syntax--other.syntax--symbol > .syntax--punctuation {
+  color: inherit;
+}
+.syntax--source.syntax--php .syntax--class.syntax--bracket {
+  color: #383a42;
+}
+.syntax--source.syntax--python .syntax--keyword.syntax--operator.syntax--logical.syntax--python {
+  color: #a626a4;
+}
+.syntax--source.syntax--python .syntax--variable.syntax--parameter {
+  color: #986801;
+}
+</style>
+  </head>
+  <body class='markdown-preview' data-use-github-style><h1 id="setup-navi-for-macbook">Setup Navi for MacBook</h1>
+<h2 id="1-homebrew">1. Homebrew</h2>
+<h3 id="homebrew-">Homebrewとは</h3>
+<blockquote>
+<p> <a href="https://ja.wikipedia.org/wiki/Anaconda_(Python%E3%83%87%E3%82%A3%E3%82%B9%E3%83%88%E3%83%AA%E3%83%93%E3%83%A5%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3">Wikipedia</a><br>Mac OS X オペレーティングシステム上でソフトウェアの導入を単純化するパッケージ管理システムのひとつ。</p>
+</blockquote>
+<p>OS関連のパッケージをインストール、アンインストールできる管理システムのこと。</p>
+<h3 id="-">インストール方法</h3>
+<ol>
+<li><a href="">Homebrew</a>にアクセス</li>
+<li>スクリプトをコピーし、ターミナルで実行</li>
+<li>インストール確認</li>
+</ol>
+<pre class="editor-colors lang-bash"><div class="line"><span class="syntax--source syntax--shell"><span class="syntax--comment syntax--line syntax--number-sign syntax--shell"><span class="syntax--punctuation syntax--definition syntax--comment syntax--shell"><span>#</span></span><span>&nbsp;スクリプト実行</span></span></span></div><div class="line"><span class="syntax--source syntax--shell"><span>$&nbsp;/usr/bin/ruby&nbsp;-e&nbsp;</span><span class="syntax--string syntax--quoted syntax--double syntax--shell"><span class="syntax--punctuation syntax--definition syntax--string syntax--begin syntax--shell"><span>"</span></span><span class="syntax--string syntax--interpolated syntax--dollar syntax--shell"><span class="syntax--punctuation syntax--definition syntax--string syntax--begin syntax--shell"><span>$(</span></span><span>curl&nbsp;-fsSL&nbsp;</span><span class="syntax--markup syntax--underline syntax--link syntax--https syntax--hyperlink"><span>https://raw.githubusercontent.com/Homebrew/install/master/install</span></span><span class="syntax--punctuation syntax--definition syntax--string syntax--end syntax--shell"><span>)</span></span></span><span class="syntax--punctuation syntax--definition syntax--string syntax--end syntax--shell"><span>"</span></span></span></span></div><div class="line"><span class="syntax--source syntax--shell"><span>&nbsp;</span></span></div><div class="line"><span class="syntax--source syntax--shell"><span class="syntax--comment syntax--line syntax--number-sign syntax--shell"><span class="syntax--punctuation syntax--definition syntax--comment syntax--shell"><span>#</span></span><span>&nbsp;ログ</span></span></span></div><div class="line"><span class="syntax--source syntax--shell"><span>==</span><span class="syntax--keyword syntax--operator syntax--redirect syntax--shell"><span>&gt;</span></span><span>&nbsp;This&nbsp;script&nbsp;will&nbsp;install:</span></span></div><div class="line"><span class="syntax--source syntax--shell"><span>/usr/local/bin/brew</span></span></div><div class="line"><span class="syntax--source syntax--shell"><span>/usr/local/share/doc/homebrew</span></span></div><div class="line"><span class="syntax--source syntax--shell"><span>︙</span></span></div><div class="line"><span class="syntax--source syntax--shell"><span>==</span><span class="syntax--keyword syntax--operator syntax--redirect syntax--shell"><span>&gt;</span></span><span>&nbsp;The&nbsp;Xcode&nbsp;Command&nbsp;Line&nbsp;Tools&nbsp;will&nbsp;be&nbsp;installed.</span></span></div><div class="line"><span class="syntax--source syntax--shell"><span class="syntax--comment syntax--line syntax--number-sign syntax--shell"><span class="syntax--punctuation syntax--definition syntax--comment syntax--shell"><span>#</span></span><span>&nbsp;Xcode&nbsp;Command&nbsp;Line&nbsp;Toolsをインストールする場合は、RETURNを押下。</span></span></span></div><div class="line"><span class="syntax--source syntax--shell"><span>Press&nbsp;RETURN&nbsp;to&nbsp;</span><span class="syntax--keyword syntax--control syntax--shell"><span>continue</span></span><span>&nbsp;or&nbsp;any&nbsp;other&nbsp;key&nbsp;to&nbsp;abort</span></span></div><div class="line"><span class="syntax--source syntax--shell"><span>==</span><span class="syntax--keyword syntax--operator syntax--redirect syntax--shell"><span>&gt;</span></span><span>&nbsp;/usr/bin/sudo&nbsp;/bin/chmod&nbsp;u+rwx&nbsp;/usr/local/bin</span></span></div><div class="line"><span class="syntax--source syntax--shell"><span class="syntax--comment syntax--line syntax--number-sign syntax--shell"><span class="syntax--punctuation syntax--definition syntax--comment syntax--shell"><span>#</span></span><span>&nbsp;ログイン時のPasswordを入力</span></span></span></div><div class="line"><span class="syntax--source syntax--shell"><span>Password:</span></span></div><div class="line"><span class="syntax--source syntax--shell"><span>==</span><span class="syntax--keyword syntax--operator syntax--redirect syntax--shell"><span>&gt;</span></span><span>&nbsp;/usr/bin/sudo&nbsp;/bin/chmod&nbsp;g+rwx&nbsp;/usr/local/bin</span></span></div><div class="line"><span class="syntax--source syntax--shell"><span>︙</span></span></div><div class="line"><span class="syntax--source syntax--shell"><span>Already&nbsp;up-to-date.</span></span></div><div class="line"><span class="syntax--source syntax--shell"><span>==</span><span class="syntax--keyword syntax--operator syntax--redirect syntax--shell"><span>&gt;</span></span><span>&nbsp;Installation&nbsp;successful</span><span class="syntax--keyword syntax--operator syntax--pipe syntax--shell"><span>!</span></span></span></div><div class="line"><span class="syntax--source syntax--shell"><span>&nbsp;</span></span></div><div class="line"><span class="syntax--source syntax--shell"><span class="syntax--comment syntax--line syntax--number-sign syntax--shell"><span class="syntax--punctuation syntax--definition syntax--comment syntax--shell"><span>#</span></span><span>&nbsp;インストール確認</span></span></span></div><div class="line"><span class="syntax--source syntax--shell"><span>$&nbsp;brew&nbsp;--version</span></span></div><div class="line"><span class="syntax--source syntax--shell"><span class="syntax--comment syntax--line syntax--number-sign syntax--shell"><span class="syntax--punctuation syntax--definition syntax--comment syntax--shell"><span>#</span></span><span>&nbsp;ログ</span></span></span></div><div class="line"><span class="syntax--source syntax--shell"><span>Homebrew&nbsp;2.2.13</span></span></div></pre>
+<h2 id="2-pyenv">2. pyenv</h2>
+<h3 id="pyenv-">pyenvとは</h3>
+<blockquote>
+<p><a href="https://github.com/pyenv/pyenv">GitHub</a><br>pyenv lets you easily switch between multiple versions of Python. It's simple, unobtrusive, and follows the UNIX tradition of single-purpose tools that do one thing well.</p>
+</blockquote>
+<p>Pythonのバージョンを管理できるコマンドラインツール。Python2系とPython3系を共存させることができる。</p>
+<h3 id="-">インストール方法</h3>
+<ol>
+<li>Homebrewでpyenvをインストール。</li>
+<li>インストール確認。</li>
+<li>pyenvにPathを通す。</li>
+<li>設定（Path）の適用。</li>
+</ol>
+<pre class="editor-colors lang-bash"><div class="line"><span class="syntax--source syntax--shell"><span class="syntax--comment syntax--line syntax--number-sign syntax--shell"><span class="syntax--punctuation syntax--definition syntax--comment syntax--shell"><span>#</span></span><span>&nbsp;pyenvをインストール</span></span></span></div><div class="line"><span class="syntax--source syntax--shell"><span>$&nbsp;brew&nbsp;install&nbsp;pyenv</span></span></div><div class="line"><span class="syntax--source syntax--shell"><span>&nbsp;</span></span></div><div class="line"><span class="syntax--source syntax--shell"><span class="syntax--comment syntax--line syntax--number-sign syntax--shell"><span class="syntax--punctuation syntax--definition syntax--comment syntax--shell"><span>#</span></span><span>&nbsp;インストール確認</span></span></span></div><div class="line"><span class="syntax--source syntax--shell"><span>$&nbsp;pyenv&nbsp;--version</span></span></div><div class="line"><span class="syntax--source syntax--shell"><span class="syntax--comment syntax--line syntax--number-sign syntax--shell"><span class="syntax--punctuation syntax--definition syntax--comment syntax--shell"><span>#</span></span><span>&nbsp;ログ</span></span></span></div><div class="line"><span class="syntax--source syntax--shell"><span>pyenv&nbsp;1.2.17</span></span></div><div class="line"><span class="syntax--source syntax--shell"><span>&nbsp;</span></span></div><div class="line"><span class="syntax--source syntax--shell"><span class="syntax--comment syntax--line syntax--number-sign syntax--shell"><span class="syntax--punctuation syntax--definition syntax--comment syntax--shell"><span>#</span></span><span>&nbsp;pyenvにPathを通す</span></span></span></div><div class="line"><span class="syntax--source syntax--shell"><span>$&nbsp;</span><span class="syntax--support syntax--function syntax--builtin syntax--shell"><span>echo</span></span><span>&nbsp;</span><span class="syntax--string syntax--quoted syntax--single syntax--shell"><span class="syntax--punctuation syntax--definition syntax--string syntax--begin syntax--shell"><span>'</span></span><span>export&nbsp;PYENV_ROOT="$HOME/.pyenv"</span><span class="syntax--punctuation syntax--definition syntax--string syntax--end syntax--shell"><span>'</span></span></span><span>&nbsp;</span><span class="syntax--keyword syntax--operator syntax--redirect syntax--shell"><span>&gt;&gt;</span></span><span>&nbsp;</span><span class="syntax--keyword syntax--operator syntax--tilde syntax--shell"><span>~</span></span><span>/.bash_profile</span></span></div><div class="line"><span class="syntax--source syntax--shell"><span>$&nbsp;</span><span class="syntax--support syntax--function syntax--builtin syntax--shell"><span>echo</span></span><span>&nbsp;</span><span class="syntax--string syntax--quoted syntax--single syntax--shell"><span class="syntax--punctuation syntax--definition syntax--string syntax--begin syntax--shell"><span>'</span></span><span>export&nbsp;PATH="$PYENV_ROOT/bin:$PATH"</span><span class="syntax--punctuation syntax--definition syntax--string syntax--end syntax--shell"><span>'</span></span></span><span>&nbsp;</span><span class="syntax--keyword syntax--operator syntax--redirect syntax--shell"><span>&gt;&gt;</span></span><span>&nbsp;</span><span class="syntax--keyword syntax--operator syntax--tilde syntax--shell"><span>~</span></span><span>/.bash_profile</span></span></div><div class="line"><span class="syntax--source syntax--shell"><span>$&nbsp;</span><span class="syntax--support syntax--function syntax--builtin syntax--shell"><span>echo</span></span><span>&nbsp;</span><span class="syntax--string syntax--quoted syntax--single syntax--shell"><span class="syntax--punctuation syntax--definition syntax--string syntax--begin syntax--shell"><span>'</span></span><span>eval&nbsp;"$(pyenv&nbsp;init&nbsp;-)"</span><span class="syntax--punctuation syntax--definition syntax--string syntax--end syntax--shell"><span>'</span></span></span><span>&nbsp;</span><span class="syntax--keyword syntax--operator syntax--redirect syntax--shell"><span>&gt;&gt;</span></span><span>&nbsp;</span><span class="syntax--keyword syntax--operator syntax--tilde syntax--shell"><span>~</span></span><span>/.bash_profile</span></span></div><div class="line"><span class="syntax--source syntax--shell"><span>&nbsp;</span></span></div><div class="line"><span class="syntax--source syntax--shell"><span class="syntax--comment syntax--line syntax--number-sign syntax--shell"><span class="syntax--punctuation syntax--definition syntax--comment syntax--shell"><span>#</span></span><span>&nbsp;設定の適用</span></span></span></div><div class="line"><span class="syntax--source syntax--shell"><span>$&nbsp;</span><span class="syntax--support syntax--function syntax--builtin syntax--shell"><span>source</span></span><span>&nbsp;.bash_profile</span></span></div></pre>
+<h2 id="3-anaconda">3. Anaconda</h2>
+<h3 id="anaconda-">Anacondaとは</h3>
+<blockquote>
+<p><a href="https://ja.wikipedia.org/wiki/Anaconda_(Python%E3%83%87%E3%82%A3%E3%82%B9%E3%83%88%E3%83%AA%E3%83%93%E3%83%A5%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3">Wikipedia</a><br>データサイエンスおよび機械学習関連アプリケーション（大規模データ処理、予測分析（英語版）、科学計算）のためのPythonおよびRプログラミング言語のフリーでオープンソースのディストリビューションであり、パッケージ管理および展開の単純化を目指したものである。</p>
+</blockquote>
+<p>AnacondaをインストールすればPythonの標準的な環境を構築できる。</p>
+<h3 id="-">インストール方法</h3>
+<ol>
+<li>pyenvでインストール可能なAnacondaを検索。</li>
+<li>Anacondaをインストール。</li>
+</ol>
+<pre class="editor-colors lang-bash"><div class="line"><span class="syntax--source syntax--shell"><span class="syntax--comment syntax--line syntax--number-sign syntax--shell"><span class="syntax--punctuation syntax--definition syntax--comment syntax--shell"><span>#</span></span><span>&nbsp;インストール可能なAnacondaを検索</span></span></span></div><div class="line"><span class="syntax--source syntax--shell"><span>$&nbsp;pyenv&nbsp;install&nbsp;-l&nbsp;</span><span class="syntax--keyword syntax--operator syntax--pipe syntax--shell"><span>|</span></span><span>&nbsp;grep&nbsp;anaconda</span></span></div><div class="line"><span class="syntax--source syntax--shell"><span>&nbsp;</span></span></div><div class="line"><span class="syntax--source syntax--shell"><span class="syntax--comment syntax--line syntax--number-sign syntax--shell"><span class="syntax--punctuation syntax--definition syntax--comment syntax--shell"><span>#</span></span><span>&nbsp;ログ</span></span></span></div><div class="line"><span class="syntax--source syntax--shell"><span>anaconda-1.4.0</span></span></div><div class="line"><span class="syntax--source syntax--shell"><span>︙</span></span></div><div class="line"><span class="syntax--source syntax--shell"><span>anaconda2-5.0.0</span></span></div><div class="line"><span class="syntax--source syntax--shell"><span>︙</span></span></div><div class="line"><span class="syntax--source syntax--shell"><span>anaconda3-5.3.1</span></span></div><div class="line"><span class="syntax--source syntax--shell"><span>&nbsp;</span></span></div><div class="line"><span class="syntax--source syntax--shell"><span class="syntax--comment syntax--line syntax--number-sign syntax--shell"><span class="syntax--punctuation syntax--definition syntax--comment syntax--shell"><span>#</span></span><span>&nbsp;3系の最新版をインストール</span></span></span></div><div class="line"><span class="syntax--source syntax--shell"><span>$&nbsp;pyenv&nbsp;install&nbsp;anaconda3-5.3.1</span></span></div><div class="line"><span class="syntax--source syntax--shell"><span>&nbsp;</span></span></div><div class="line"><span class="syntax--source syntax--shell"><span class="syntax--comment syntax--line syntax--number-sign syntax--shell"><span class="syntax--punctuation syntax--definition syntax--comment syntax--shell"><span>#</span></span><span>&nbsp;切り替えられるをバージョン確認</span></span></span></div><div class="line"><span class="syntax--source syntax--shell"><span>$&nbsp;pyenv&nbsp;versions</span></span></div><div class="line"><span class="syntax--source syntax--shell"><span>&nbsp;</span></span></div><div class="line"><span class="syntax--source syntax--shell"><span class="syntax--comment syntax--line syntax--number-sign syntax--shell"><span class="syntax--punctuation syntax--definition syntax--comment syntax--shell"><span>#</span></span><span>&nbsp;ログ&nbsp;（*が現在指定しているバージョン）</span></span></span></div><div class="line"><span class="syntax--source syntax--shell"><span>&nbsp;&nbsp;system</span></span></div><div class="line"><span class="syntax--source syntax--shell"><span>&nbsp;&nbsp;anaconda2-5.3.1</span></span></div><div class="line"><span class="syntax--source syntax--shell"><span>&nbsp;&nbsp;anaconda3-4.4.0</span></span></div><div class="line"><span class="syntax--source syntax--shell"><span class="syntax--keyword syntax--operator syntax--glob syntax--shell"><span>*</span></span><span>&nbsp;anaconda3-5.3.1</span></span></div><div class="line"><span class="syntax--source syntax--shell"><span>&nbsp;</span></span></div><div class="line"><span class="syntax--source syntax--shell"><span class="syntax--comment syntax--line syntax--number-sign syntax--shell"><span class="syntax--punctuation syntax--definition syntax--comment syntax--shell"><span>#</span></span><span>&nbsp;バージョン切り替え</span></span></span></div><div class="line"><span class="syntax--source syntax--shell"><span class="syntax--comment syntax--line syntax--number-sign syntax--shell"><span class="syntax--punctuation syntax--definition syntax--comment syntax--shell"><span>#</span></span><span>&nbsp;globalとすると全体に、localにするとそのカレントディレクトリ以下に指定したバージョンが反映される</span></span></span></div><div class="line"><span class="syntax--source syntax--shell"><span>$&nbsp;pyenv&nbsp;global&nbsp;anaconda3-5.3.1</span></span></div><div class="line"><span class="syntax--source syntax--shell"><span>$&nbsp;python&nbsp;--version</span></span></div><div class="line"><span class="syntax--source syntax--shell"><span>Python&nbsp;3.7.0</span></span></div><div class="line"><span class="syntax--source syntax--shell"><span>&nbsp;</span></span></div><div class="line"><span class="syntax--source syntax--shell"><span>$&nbsp;pyenv&nbsp;</span><span class="syntax--storage syntax--modifier syntax--shell"><span>local</span></span><span>&nbsp;anaconda2-5.3.1</span></span></div><div class="line"><span class="syntax--source syntax--shell"><span>$&nbsp;python&nbsp;--version</span></span></div><div class="line"><span class="syntax--source syntax--shell"><span>Python&nbsp;2.7.16</span></span></div></pre>
+<h2 id="4-mactex">4. MacTeX</h2>
+<h3 id="mactex-">MacTeXとは</h3>
+<blockquote>
+<p><a href="https://texwiki.texjp.org/?MacTeX">TEX Wiki</a><br>MacTeX は TeX Live をベースにした macOS 専用の TeX ディストリビューション</p>
+</blockquote>
+<p>tlmgrはTeXLiveのパッケージ管理ツールで、コマンドラインで使用する。</p>
+<h3 id="-">インストール方法</h3>
+<pre class="editor-colors lang-bash"><div class="line"><span class="syntax--source syntax--shell"><span class="syntax--comment syntax--line syntax--number-sign syntax--shell"><span class="syntax--punctuation syntax--definition syntax--comment syntax--shell"><span>#</span></span><span>&nbsp;MacTeXのインストール</span></span></span></div><div class="line"><span class="syntax--source syntax--shell"><span>$&nbsp;brew&nbsp;cask&nbsp;install&nbsp;mactex</span></span></div><div class="line"><span class="syntax--source syntax--shell"><span>&nbsp;</span></span></div><div class="line"><span class="syntax--source syntax--shell"><span class="syntax--comment syntax--line syntax--number-sign syntax--shell"><span class="syntax--punctuation syntax--definition syntax--comment syntax--shell"><span>#</span></span><span>&nbsp;アップデート</span></span></span></div><div class="line"><span class="syntax--source syntax--shell"><span>$&nbsp;sudo&nbsp;tlmgr&nbsp;update&nbsp;--self&nbsp;--all</span></span></div><div class="line"><span class="syntax--source syntax--shell"><span>&nbsp;</span></span></div><div class="line"><span class="syntax--source syntax--shell"><span class="syntax--comment syntax--line syntax--number-sign syntax--shell"><span class="syntax--punctuation syntax--definition syntax--comment syntax--shell"><span>#</span></span><span>&nbsp;ドキュメントサイズの設定</span></span></span></div><div class="line"><span class="syntax--source syntax--shell"><span>$&nbsp;sudo&nbsp;tlmgr&nbsp;paper&nbsp;a4</span></span></div><div class="line"><span class="syntax--source syntax--shell"><span>&nbsp;</span></span></div><div class="line"><span class="syntax--source syntax--shell"><span class="syntax--comment syntax--line syntax--number-sign syntax--shell"><span class="syntax--punctuation syntax--definition syntax--comment syntax--shell"><span>#</span></span><span>&nbsp;日本語向けパッケージのインストール</span></span></span></div><div class="line"><span class="syntax--source syntax--shell"><span>$&nbsp;sudo&nbsp;tlmgr&nbsp;install&nbsp;collection-langjapanese</span></span></div></pre>
+<h2 id="5-atom">5. Atom</h2>
+<h3 id="atom-">Atomとは</h3>
+<blockquote>
+<p><a href="https://ja.wikipedia.org/wiki/Atom_(%E3%83%86%E3%82%AD%E3%82%B9%E3%83%88%E3%82%A8%E3%83%87%E3%82%A3%E3%82%BF">Wikipedia</a><br>Atom（アトム）は、GitHubが開発したオープンソースのテキストエディタである。</p>
+</blockquote>
+<p>PythonやTexのコーディングに使うとよい。テキストエディタは何を用いてもよいが小林先生のおすすめはこれ。</p>
+<h3 id="-">インストール方法</h3>
+<ol>
+<li><a href="https://atom.io/">Atom</a>からファイルをインストール</li>
+<li>展開し指示に従ってインストール</li>
+</ol>
+<h3 id="-">パッケージの追加方法</h3>
+<p>Atomを起動しツールバーから<code style="font-family: &quot;Ricty Diminished&quot;;">Atom &gt; Preferences &gt; Settings &gt; install</code>へ移動する。検索欄から好きなパッケージやテーマ（デザイン）をインストールできる。以下のパッケージをインストールしておくと良い。</p>
+<h4 id="-">基本パッケージ</h4>
+<ul>
+<li><code style="font-family: &quot;Ricty Diminished&quot;;">atom-ide-ui</code> : atomをideとして使用する際の機能をまとめた公式パッケージ</li>
+<li><code style="font-family: &quot;Ricty Diminished&quot;;">show-ideographic-space</code> : 全角スペースに編集記号を表示（半角と全角の判別用）</li>
+<li><code style="font-family: &quot;Ricty Diminished&quot;;">project-manager</code> : プロジェクトフォルダを管理する</li>
+<li><code style="font-family: &quot;Ricty Diminished&quot;;">minimap</code> : minimapを表示する</li>
+<li><code style="font-family: &quot;Ricty Diminished&quot;;">minimap-cursorline</code> : minimap上で今いるlineを表示する</li>
+<li><code style="font-family: &quot;Ricty Diminished&quot;;">minimap-find-and-replace</code> : minimap 上で検索・置換単語を表示する</li>
+<li><code style="font-family: &quot;Ricty Diminished&quot;;">minimap-highlight-selected</code> : minimap上で選択した単語をハイライトする</li>
+<li><code style="font-family: &quot;Ricty Diminished&quot;;">autocomplete-paths</code> : 相対パスを入力補完する</li>
+<li><code style="font-family: &quot;Ricty Diminished&quot;;">file-icons</code> : ファイルの色とアイコンを変えておしゃれにする</li>
+<li><code style="font-family: &quot;Ricty Diminished&quot;;">atom-beauty</code> : 字下げ（インデント）などを自動でそろえてくれる</li>
+<li><code style="font-family: &quot;Ricty Diminished&quot;;">highlight-selected</code> : 選択した単語をハイライトする</li>
+</ul>
+<h4 id="-">無効化推奨デフォルトパッケージ</h4>
+<ul>
+<li><code style="font-family: &quot;Ricty Diminished&quot;;">spell-check</code> : 綴間違いなどを教えてくれるパッケージだが日本語非対応</li>
+</ul>
+<h4 id="python-">Python用パッケージ</h4>
+<ul>
+<li><code style="font-family: &quot;Ricty Diminished&quot;;">atom-runner</code> : Pythonなどのコードを実行する際に必要（Ctrl + Rで実行、Escか右上の×ボタンで閉じる事が可能）</li>
+<li><code style="font-family: &quot;Ricty Diminished&quot;;">autocomplete-python</code> : Pythonコードを補完してくれる</li>
+</ul>
+<p>適当なデレクトリにサンプルコードを作成し、実行（Ctrl + R）できればOK!</p>
+<pre class="editor-colors lang-Python"><div class="line"><span class="syntax--source syntax--python"><span class="syntax--comment syntax--line syntax--number-sign syntax--python"><span class="syntax--punctuation syntax--definition syntax--comment syntax--python"><span>#</span></span><span>&nbsp;sample.py</span><span>&nbsp;</span></span></span></div><div class="line"><span class="syntax--source syntax--python"><span class="syntax--keyword syntax--control syntax--import syntax--python"><span>import</span></span><span>&nbsp;numpy&nbsp;</span><span class="syntax--keyword syntax--other syntax--python"><span>as</span></span><span>&nbsp;np</span></span></div><div class="line"><span class="syntax--source syntax--python"><span>&nbsp;</span></span></div><div class="line"><span class="syntax--source syntax--python"><span>x&nbsp;</span><span class="syntax--keyword syntax--operator syntax--assignment syntax--python"><span>=</span></span><span>&nbsp;</span><span class="syntax--variable syntax--other syntax--object syntax--python"><span>np</span></span><span class="syntax--meta syntax--method-call syntax--python"><span class="syntax--punctuation syntax--separator syntax--method syntax--period syntax--python"><span>.</span></span><span class="syntax--entity syntax--name syntax--function syntax--python"><span>array</span></span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--begin syntax--bracket syntax--round syntax--python"><span>(</span></span><span class="syntax--meta syntax--method-call syntax--arguments syntax--python"><span class="syntax--meta syntax--structure syntax--list syntax--python"><span class="syntax--punctuation syntax--definition syntax--list syntax--begin syntax--python"><span>[</span></span><span class="syntax--meta syntax--structure syntax--list syntax--item syntax--python"><span class="syntax--constant syntax--numeric syntax--integer syntax--decimal syntax--python"><span>1</span></span></span><span class="syntax--punctuation syntax--separator syntax--list syntax--python"><span>,</span></span><span>&nbsp;</span><span class="syntax--meta syntax--structure syntax--list syntax--item syntax--python"><span class="syntax--constant syntax--numeric syntax--integer syntax--decimal syntax--python"><span>2</span></span></span><span class="syntax--punctuation syntax--separator syntax--list syntax--python"><span>,</span></span><span>&nbsp;</span><span class="syntax--meta syntax--structure syntax--list syntax--item syntax--python"><span class="syntax--constant syntax--numeric syntax--integer syntax--decimal syntax--python"><span>3</span></span></span><span class="syntax--punctuation syntax--definition syntax--list syntax--end syntax--python"><span>]</span></span></span></span><span class="syntax--punctuation syntax--definition syntax--arguments syntax--end syntax--bracket syntax--round syntax--python"><span>)</span></span></span></span></div><div class="line"><span class="syntax--source syntax--python"><span class="syntax--keyword syntax--other syntax--python"><span>print</span></span><span>(</span><span class="syntax--variable syntax--other syntax--object syntax--python"><span>x</span></span><span class="syntax--punctuation syntax--separator syntax--property syntax--period syntax--python"><span>.</span></span><span class="syntax--variable syntax--other syntax--property syntax--python"><span>dtype</span></span><span>)</span></span></div></pre>
+<h4 id="tex-">Tex用パッケージ</h4>
+<ul>
+<li><p><code style="font-family: &quot;Ricty Diminished&quot;;">latex</code> : AtomからLaTeXの文書スクリプトをコンパイルするのに必要
+設定からEngineの項目をplatexする。PDF Producerの項目は以下の設定がおすすめ（Atomのpdfビュアーを使うため）。</p>
+<p>☑  Move Result to Source Directory<br>☑  Build on Save<br>□  Open Result after successful Build<br>□  Open Result in Background  </p>
+<p>Command + S でスクリプトのセーブ+ビルド+pdfのセーブを実行できる。</p>
+</li>
+<li><code style="font-family: &quot;Ricty Diminished&quot;;">language-latex</code> : Atom内でLaTeXのシンタックスハイライトのために必要</li>
+<li><code style="font-family: &quot;Ricty Diminished&quot;;">latexer</code> : LaTeXコードの自動補完をしてくれる</li>
+<li><code style="font-family: &quot;Ricty Diminished&quot;;">pdf-view</code> : AtomのためのPDFビューアー</li>
+</ul>
+<p>適当なディレクトリにサンプルコードを作成、ビルド（Ctrl + S）できればOK!</p>
+<pre class="editor-colors lang-Tex"><div class="line"><span class="syntax--text syntax--plain syntax--null-grammar"><span>%&nbsp;sample.tex</span></span></div><div class="line"><span class="syntax--text syntax--plain syntax--null-grammar"><span>\documentclass{jarticle}</span></span></div><div class="line"><span class="syntax--text syntax--plain syntax--null-grammar"><span>\usepackage{amsmath}</span></span></div><div class="line"><span class="syntax--text syntax--plain syntax--null-grammar"><span>&nbsp;</span></span></div><div class="line"><span class="syntax--text syntax--plain syntax--null-grammar"><span>\begin{document}</span></span></div><div class="line"><span class="syntax--text syntax--plain syntax--null-grammar"><span>&nbsp;</span></span></div><div class="line"><span class="syntax--text syntax--plain syntax--null-grammar"><span>\section{Test}</span></span></div><div class="line"><span class="syntax--text syntax--plain syntax--null-grammar"><span>\begin{align}</span></span></div><div class="line"><span class="syntax--text syntax--plain syntax--null-grammar"><span>&nbsp;&nbsp;\sin(\theta)</span></span></div><div class="line"><span class="syntax--text syntax--plain syntax--null-grammar"><span>\end{align}</span></span></div><div class="line"><span class="syntax--text syntax--plain syntax--null-grammar"><span>&nbsp;</span></span></div><div class="line"><span class="syntax--text syntax--plain syntax--null-grammar"><span>\end{document}</span></span></div></pre>
+<p>ファイルの種類（シンタックス）は自動で判別され、シンタックスハイライトをつけてくれるが、うまく動作しない時は Ctrl + Shift + L でファイルの種類を手動で設定すればよい。</p></body>
+</html>
