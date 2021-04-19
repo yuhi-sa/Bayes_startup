@@ -9,5 +9,5 @@
 [startup](https://github.com/yuhi-sa/Startup/blob/main/stratup.ipynb)
 
 ## 最適化班
-マルチエージェントシステム（合意アルゴリズム)
+マルチエージェントシステム（合意アルゴリズム)  
 [startup2](https://github.com/yuhi-sa/Startup/blob/main/startup2.ipynb)
